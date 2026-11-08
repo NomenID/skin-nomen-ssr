@@ -1,4 +1,12 @@
 <?php
+/*
+ * Copyright (c) 2025-2026 Yunyun (Wang Yaoze)
+ * Licensed under the GNU General Public License, version 3 or any later
+ * version, with additional attribution terms in the NOTICE file.
+ * Source: https://github.com/NomenID/skin-nomen-ssr
+ * Project: https://nomen.caellab.com/
+ */
+
 /**
  * 应用区（真 SPA）布局。区别于 default.php：没有 PHP 头部/页脚/抽屉，
  * 只输出星野背景 + SPA 挂载点，界面外壳由前端 AppLayout 组件渲染。

@@ -1,3 +1,10 @@
+<?php /*
+ * Copyright (c) 2025-2026 Yunyun (Wang Yaoze)
+ * Licensed under the GNU General Public License, version 3 or any later
+ * version, with additional attribution terms in the NOTICE file.
+ * Source: https://github.com/NomenID/skin-nomen-ssr
+ * Project: https://nomen.caellab.com/
+ */ ?>
 <?php $brand = \Nomen\Src\Brand::all(); ?>
 <!DOCTYPE html>
 <html lang="<?= htmlspecialchars(\Nomen\Src\I18n::code()) ?>" dir="<?= \Nomen\Src\I18n::dir() ?>">

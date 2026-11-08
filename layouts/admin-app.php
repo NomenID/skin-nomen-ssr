@@ -1,4 +1,12 @@
 <?php
+/*
+ * Copyright (c) 2025-2026 Yunyun (Wang Yaoze)
+ * Licensed under the GNU General Public License, version 3 or any later
+ * version, with additional attribution terms in the NOTICE file.
+ * Source: https://github.com/NomenID/skin-nomen-ssr
+ * Project: https://nomen.caellab.com/
+ */
+
 /**
  * 管理后台 SPA 布局：侧栏 / 顶栏 / 页面内容都由 Vue 渲染，
  * 这里只负责文档骨架、主题初始化和资源加载。
