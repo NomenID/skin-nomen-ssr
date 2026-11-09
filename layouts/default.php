@@ -3,7 +3,7 @@
  * Licensed under the GNU General Public License, version 3 only, with
  * additional attribution terms in the NOTICE file.
  * Source: https://github.com/NomenID/skin-nomen-ssr
- * Project: https://nomen.caellab.com/
+ * Project: https://nomenid.org/
  */ ?>
 <?php $brand = \Nomen\Src\Brand::all(); ?>
 <!DOCTYPE html>
