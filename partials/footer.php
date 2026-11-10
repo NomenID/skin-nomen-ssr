@@ -14,7 +14,7 @@ $links = $links ?? \Nomen\Src\Brand::footerLinks();
 <footer class="footer">
     <div class="footer-inner">
         <?php if ($copyright !== ''): ?>
-            <span><?= htmlspecialchars($copyright) ?></span>
+            <span><?= \Nomen\Src\Brand::copyrightHtml($copyright) ?></span>
         <?php endif; ?>
         <?php if ($links !== []): ?>
             <nav class="footer-links">
