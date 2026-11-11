@@ -1,7 +1,7 @@
 {
     "name": "Nomen SSR",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Lightweight server-rendered skin: no starfield background, no frontend framework, home and docs rendered straight from PHP",
-    "license": "GPL-3.0-only",
+    "license": "Apache-2.0",
     "author": ["Yunyun (Wang Yaoze)"]
 }

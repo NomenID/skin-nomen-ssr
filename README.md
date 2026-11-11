@@ -14,4 +14,4 @@ git clone https://github.com/NomenID/skin-nomen-ssr.git skins/nomen-ssr
 
 ## 许可
 
-GPL-3.0-only，见 [LICENSE](LICENSE)。
+Apache-2.0，见 [LICENSE](LICENSE)。
