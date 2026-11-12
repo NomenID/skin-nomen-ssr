@@ -14,7 +14,7 @@
     <link rel="canonical" href="<?= htmlspecialchars($brand['base_url']) ?><?= rtrim(strtolower(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)), '/') ?: '/' ?>">
     <title><?php $t = $title ?? $brand['name']; echo htmlspecialchars($t === $brand['name'] ? $t : "$t - " . $brand['name']); ?></title>
     <link rel="stylesheet" href="/css/style.css?v=k2f9xw6t">
-    <link rel="stylesheet" href="/css/ui.css?v=woimt5tg">
+    <link rel="stylesheet" href="/css/ui.css?v=ye7kz9dv">
     <?php if (\Nomen\Src\I18n::isRtl()): ?>
         <link rel="stylesheet" href="/css/rtl.css?v=31472968">
     <?php endif; ?>

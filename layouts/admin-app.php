@@ -15,14 +15,14 @@
  */
 $brand = \Nomen\Src\Brand::all();
 ?><!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="<?= htmlspecialchars(\Nomen\Src\I18n::code()) ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title><?= htmlspecialchars($brand['name']) ?> 管理后台</title>
+    <title><?= htmlspecialchars($brand['name']) ?> <?= htmlspecialchars(\Nomen\Src\I18n::t('Admin')) ?></title>
     <link rel="stylesheet" href="/css/style.css?v=k2f9xw6t">
-    <link rel="stylesheet" href="/css/ui.css?v=woimt5tg">
+    <link rel="stylesheet" href="/css/ui.css?v=ye7kz9dv">
     <link rel="stylesheet" href="/css/admin.css?v=7kwz2rne">
     <?php foreach (\Nomen\Src\Plugins::styles() as $href): ?>
         <link rel="stylesheet" href="<?= htmlspecialchars($href) ?>">
@@ -38,7 +38,7 @@ $brand = \Nomen\Src\Brand::all();
             }
         })();
     </script>
-    <script src="<?= \Nomen\Src\I18n::catalogUrl('zh-hans') ?>"></script>
+    <script src="<?= \Nomen\Src\I18n::catalogUrl() ?>"></script>
     <?= \Nomen\Src\Hooks::filter('layout.head', '', 'admin') ?>
 </head>
 <body class="admin-body">
