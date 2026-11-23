@@ -21,13 +21,13 @@ $brand = \Nomen\Src\Brand::all();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title><?php $t = $title ?? $brand['name']; echo htmlspecialchars($t === $brand['name'] ? $t : "$t - " . $brand['name']); ?></title>
-    <link rel="stylesheet" href="/css/style.css?v=qetluasm">
-    <link rel="stylesheet" href="/css/ui.css?v=ye7kz9dv">
+    <?= \Nomen\Src\Loading::styleTag('/css/style.css?v=qetluasm') ?>
+    <?= \Nomen\Src\Loading::styleTag('/css/ui.css?v=ye7kz9dv') ?>
     <?php if (\Nomen\Src\I18n::isRtl()): ?>
-        <link rel="stylesheet" href="/css/rtl.css?v=31472968">
+        <?= \Nomen\Src\Loading::styleTag('/css/rtl.css?v=31472968') ?>
     <?php endif; ?>
     <?php foreach (\Nomen\Src\Plugins::styles() as $href): ?>
-        <link rel="stylesheet" href="<?= htmlspecialchars($href) ?>">
+        <?= \Nomen\Src\Loading::styleTag($href, false) ?>
     <?php endforeach; ?>
     <link rel="icon" href="<?= htmlspecialchars($brand['logo']) ?>">
     <script>
@@ -43,9 +43,9 @@ $brand = \Nomen\Src\Brand::all();
     </script>
     <?= \Nomen\Src\Hooks::filter('layout.head', '', 'app') ?>
 </head>
-<body>
+<body class="nomen-lazy-sky">
     <?= \Nomen\Src\Hooks::filter('layout.body.start', '', 'app') ?>
-    <?php require \Nomen\Src\Skins::template('_site_sky'); ?>
+    <?php // 天空背景不在首屏解析：loading.js 在 app 挂载后按需注入 ?>
     <?= $content ?>
     <script src="<?= \Nomen\Src\I18n::catalogUrl() ?>"></script>
     <?= \Nomen\Src\ViteAssets::entry('src/entries/app.js') ?>

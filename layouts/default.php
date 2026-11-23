@@ -13,18 +13,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="<?= htmlspecialchars($brand['base_url']) ?><?= rtrim(strtolower(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)), '/') ?: '/' ?>">
     <title><?php $t = $title ?? $brand['name']; echo htmlspecialchars($t === $brand['name'] ? $t : "$t - " . $brand['name']); ?></title>
-    <link rel="stylesheet" href="/css/style.css?v=qetluasm">
-    <link rel="stylesheet" href="/css/ui.css?v=ye7kz9dv">
+    <?= \Nomen\Src\Loading::styleTag('/css/style.css?v=qetluasm') ?>
+    <?= \Nomen\Src\Loading::styleTag('/css/ui.css?v=ye7kz9dv') ?>
     <?php if (\Nomen\Src\I18n::isRtl()): ?>
-        <link rel="stylesheet" href="/css/rtl.css?v=31472968">
+        <?= \Nomen\Src\Loading::styleTag('/css/rtl.css?v=31472968') ?>
     <?php endif; ?>
     <?php foreach ((array)($extraCss ?? []) as $extraCssItem): ?>
         <?php if ((string)$extraCssItem !== ''): ?>
-            <link rel="stylesheet" href="<?= htmlspecialchars((string)$extraCssItem) ?>">
+            <?= \Nomen\Src\Loading::styleTag((string)$extraCssItem) ?>
         <?php endif; ?>
     <?php endforeach; ?>
     <?php foreach (\Nomen\Src\Plugins::styles() as $href): ?>
-        <link rel="stylesheet" href="<?= htmlspecialchars($href) ?>">
+        <?= \Nomen\Src\Loading::styleTag($href, false) ?>
     <?php endforeach; ?>
     <link rel="icon" href="<?= htmlspecialchars($brand['logo']) ?>">
     <script>
