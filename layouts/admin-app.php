@@ -23,7 +23,7 @@ $brand = \Nomen\Src\Brand::all();
     <title><?= htmlspecialchars($brand['name']) ?> <?= htmlspecialchars(\Nomen\Src\I18n::t('Admin')) ?></title>
     <?= \Nomen\Src\Loading::styleTag('/css/style.css?v=qetluasm') ?>
     <?= \Nomen\Src\Loading::styleTag('/css/ui.css?v=ye7kz9dv') ?>
-    <?= \Nomen\Src\Loading::styleTag('/css/admin.css?v=q7m2vx9k') ?>
+    <?= \Nomen\Src\Loading::styleTag('/css/admin.css?v=r8v3k2wd') ?>
     <?php foreach (\Nomen\Src\Plugins::styles() as $href): ?>
         <?= \Nomen\Src\Loading::styleTag($href, false) ?>
     <?php endforeach; ?>
